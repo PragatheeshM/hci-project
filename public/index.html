@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Cards</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Top Navbar -->
+    <nav class="top-nav">
+        <!-- Search Bar: aligned to the left -->
+        <div class="search-container">
+            <input type="text" id="search-bar" placeholder="Search for a movie...">
+        </div>
+        <!-- Buttons: aligned to the right -->
+        <div class="top-nav-buttons">
+            <!-- Dark Mode Toggle -->
+            <button id="dark-mode-toggle" class="icon-button">
+                <img id="theme-icon" src="light.png" alt="Toggle Theme">
+            </button>
+            <!-- Language Toggle -->
+            <button id="language-toggle" class="icon-button">
+                <img id="lang-btn" src="langw.png" alt="Change Language">
+            </button>
+            <!-- Dropdown for language options -->
+            <ul id="language-options" class="dropdown">
+                <li>English</li>
+                <li>French</li>
+                <li>Spanish</li>
+                <li>German</li>
+            </ul>
+            <!-- Login Button -->
+            <!-- <button id="login-btn">Login</button> -->
+            <button class="icon-button">
+                <img id="user-btn" src="userw.png" alt="User Profile">
+            </button>
+        </div>
+    </nav>
+
+    <!-- Side Navbar -->
+    <div class="side-nav" id="side-nav">
+        <button id="nav-toggle" class="nav-toggle">❯</button>
+        <ul>
+            <br>
+            <h1 style="margin: 10px;">WatchEase</h1>
+            <li><a href="/">Popular Movies</a></li>
+            <li><a href="#">Favorites</a></li>
+            <li><a href="#">Watchlist</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+     <br>
+    <div class="main-content">
+        <h1>Popular</h1>
+        <div id="movies-container"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,303 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    transition: background-color 0.3s ease;
+}
+
+h1 {
+    margin-top: 80px;
+}
+
+/* Top Navbar */
+.top-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f6f6f6;
+    color: white;
+    padding: 10px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    box-sizing: border-box;
+    border: solid 2px red;
+}
+
+/* Search Container: Center search bar */
+.search-container {
+    width: 500px; /* Allows the search container to take available space */
+    display: flex;
+    flex: 1;
+    justify-content: center; /* Center the search bar within its space */
+}
+
+/* Search Bar */
+#search-bar {
+    height: 28px;
+    width: 60px; /* Fixed width */
+    padding: 5px;
+    text-align: center; /* Horizontally center the placeholder */
+    line-height: normal; /* Adjust line-height if necessary */
+    border-radius: 20px;
+    size: 30px;
+    background-color: white;
+    border: transparent;
+    caret-color: black;
+}
+
+body.dark-mode #search-bar{
+    background-color: #281532;
+    caret-color: white;
+}
+
+#search-bar::placeholder {
+    justify-content: center;
+    text-align: center; /* Center the placeholder text */
+    font-size: 17px;
+    color: #ac241e;
+}
+
+/* Button Container */
+.top-nav-buttons {
+    margin: 5px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    align-items: center;
+    border-left: solid 2px #ac241e;
+}
+
+/* Other styles remain unchanged */
+.top-nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; /* Ensure the navbar content spans the full width */
+}
+
+#search-bar {
+    width: 100%;
+    padding: 5px;
+    margin-right: 10px;
+}
+
+#dark-mode-toggle {
+    padding: 5px 10px;
+    width: 30px; /* Adjust the size of the SVG icon */
+    height: 30px;
+    margin-bottom: 6px;
+}
+
+/* Side Navbar */
+.side-nav {
+    position: fixed;
+    top: 50px;
+    left: -200px;
+    width: 200px;
+    height: 100%;
+    background-color: #ffbdcc;
+    color: black;
+    
+    transition: left 0.3s ease;
+    z-index: 999;
+}
+
+body.dark-mode .side-nav {
+    background-color: #ffbdcc;
+    color: white;
+}
+
+.side-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    padding-top: 20px;
+}
+
+.side-nav ul li {
+    padding: 15px 20px;
+}
+
+.side-nav ul li a {
+    color: black;
+    text-decoration: none;
+}
+
+body.dark-mode .side-nav ul li a {
+    color: white;
+}
+
+.nav-toggle {
+    position: absolute;
+    top: 20px;
+    right: -20px;
+    background: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.main-content {
+    padding-left: 220px;
+}
+
+/* Movie Cards */
+#movies-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.movie-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    width: 200px;
+    text-align: center;
+}
+
+.movie-card img {
+    max-width: 100%;
+    border-radius: 4px;
+}
+
+.buttons {
+    margin-top: 10px;
+}
+
+.buttons button {
+    margin: 5px;
+    background: transparent; /* Set background to transparent */
+    border: none; /* Remove border */
+    cursor: pointer; /* Pointer cursor for buttons */
+}
+
+/* Button Image Size */
+.buttons img {
+    width: 24px; /* Set a consistent size for button images */
+    height: 24px; /* Set a consistent height for button images */
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #020428;
+    color: white;
+}
+
+body.light-mode {
+    background-color: #f0f0f0;
+    color: #000;
+}
+
+body.dark-mode .top-nav {
+    background-color: #170421;
+}
+
+body.dark-mode .side-nav {
+    background-color: #02031d;
+}
+
+body.dark-mode .movie-card {
+    background-color: #3f6c87;
+    color: white;
+}
+
+/* SVG Icon Size */
+.icon-button {
+    background: none; /* No background */
+    border: none; /* No border */
+    cursor: pointer;
+    display: flex; /* Flexbox for alignment */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    width: 40px; /* Set consistent button width */
+    height: 40px; /* Set consistent button height */
+}
+
+.icon-button img {
+    width: 24px; /* Control size of all SVG icons */
+    height: 24px;
+}
+
+.icon-button #user-btn {
+    width: 30px; /* Control size of all SVG icons */
+    height: 30px;
+}
+
+.icon-button:hover img {
+    transform: scale(1.1); /* Optional zoom effect on hover */
+}
+
+#language-options {
+    display: none; /* Hidden by default */
+    list-style: none;
+    margin: 0;
+    padding: 10px;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    top: 40px;  /* Adjusted to be just below the icon */
+    right: 0;  /* Align the dropdown to the right */
+    z-index: 10; /* Ensure it is above other content */
+}
+
+body.dark-mode #language-options {
+    background-color: #444;
+}
+
+#language-options li {
+    padding: 8px 16px;
+    cursor: pointer;
+    color: #333; /* Default light mode text color */
+}
+
+body.dark-mode #language-options li {
+    color: #fff; /* Dark mode text color */
+}
+
+#language-options li:hover {
+    background-color: #f0f0f0;
+}
+
+body.dark-mode #language-options li:hover {
+    background-color: #666; /* Dark mode hover */
+}
+
+/* Dark and Light Mode SVG Icons */
+#dark-mode-toggle {
+    width: 30px; /* Adjust the size of the SVG icon */
+    height: 30px;
+}
+
+#dark-mode-toggle img {
+    margin-top: 5px;
+    width: 24px;
+    height: 24px;
+}
+
+/* Language Dropdown Button */
+#language-button {
+    width: 30px; /* Adjust the size of the SVG icon */
+    height: 30px;
+}
+
+#language-button img {
+    width: 100%;
+    height: 100%;
+}
+
+#login-btn {
+    padding: 5px 10px;
+    background-color: #555;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
